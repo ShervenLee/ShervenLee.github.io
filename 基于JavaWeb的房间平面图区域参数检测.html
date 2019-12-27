@@ -1,0 +1,73 @@
+<html>
+<head>
+  <title>基于JavaWeb的房间平面图区域参数检测</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/601302 (zh-CN, DDL); Windows/10.0.0 (Win64); EDAMVersion=V2;"/>
+  <meta name="content-class" content="yinxiang.markdown"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="3259"/>
+<h1>基于JavaWeb的房间平面图区域参数检测</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>作者：</b></td><td><i>Sherven</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div><span><div style="font-size: 14px; margin: 0; padding: 0; width: 100%;"><h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">【房间平面图区域参数检测】</h5>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">【标签】</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">Java、Eclipse、IDEA、房屋平面数据检测、Tomcat</p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">【环境】</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">Java、JDK8、Eclipse、IDEA、Tomcat</p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">【介绍】</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">（IDEA和Eclipse上均可运行）</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">设计一个简易地图(类似房间平面图)，图上标有多个检测区域(下面已标注要检测哪五个)，区域上显示当前的检测数值和状态(红，黄，绿)。</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">点击检测区域，弹出对话框，对话框中内容包括:
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">检测数值的实时曲线，可能有多个（实时的意思是要显示检测区域部分的后端数据，以echarts的曲线图形式展示）</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">同时，也可以用表格的方式，显示上述检测数值，同时表格数据可以导出EXCEL格式文件</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">检测区域的对话框可以同时显示(非模态方式)，也可以只能单一显示(模态方式)（不使用数据库调用，只用表格）</li>
+</ul>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">客户端的所有请求（如：温度等的数值记录）都通过服务端的TOMCAT上的java程序实现4.服务端编写所有请求的实现过程，以JSON格式方式返回请求内容</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">多行显示不同的检测内容，把状态按钮调到每行的前面作为各自的状态（红黄绿三种）。</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">检测区域：
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">厨房：一氧化碳浓度，温度</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">主卧：温度，湿度，噪声</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">阳台：温度，湿度，风力</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">餐厅：温度，湿度，光亮</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">主卫：温度，湿度</li>
+</ul>
+</li>
+</ul>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">【效果展示】</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">有两千多字的设计文档（五个区域，此处之展示两个了一个厨房作为演示，GIF过大，不能上传，想要看视频效果可以联系博主-联系方式在文章底部）<br/>
+<img src="基于JavaWeb的房间平面图区域参数检测_files/Image.png" type="image/png" data-filename="Image.png"/><br/>
+<img src="基于JavaWeb的房间平面图区域参数检测_files/Image [1].png" type="image/png" data-filename="Image.png"/><br/>
+<img src="基于JavaWeb的房间平面图区域参数检测_files/Image [2].png" type="image/png" data-filename="Image.png"/><br/>
+<img src="基于JavaWeb的房间平面图区域参数检测_files/Image [3].png" type="image/png" data-filename="Image.png"/></p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">【安装和使用】</h5>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;">安装相应版本JDK（配置环境变量）</li>
+<li style="line-height: 160%; box-sizing: content-box;">导入项目到IDEA或Eclipse</li>
+<li style="line-height: 160%; box-sizing: content-box;">运行项目</li>
+</ol>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">【问题联系】</h5>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">QQ:535798943</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">邮箱:535798943@qq.com</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">【注1】联系时请注明哪里看到的，有什么需要</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">【注2】每个项目都在标注的环境下运行过，有完整代码</li>
+</ul>
+</div><center style="display:none !important;visibility:collapse !important;height:0 !important;white-space:nowrap;width:100%;overflow:hidden">%23%23%23%23%23%20%E3%80%90%E6%88%BF%E9%97%B4%E5%B9%B3%E9%9D%A2%E5%9B%BE%E5%8C%BA%E5%9F%9F%E5%8F%82%E6%95%B0%E6%A3%80%E6%B5%8B%E3%80%91%0A%23%23%23%23%23%20%E3%80%90%E6%A0%87%E7%AD%BE%E3%80%91%0AJava%E3%80%81Eclipse%E3%80%81IDEA%E3%80%81%E6%88%BF%E5%B1%8B%E5%B9%B3%E9%9D%A2%E6%95%B0%E6%8D%AE%E6%A3%80%E6%B5%8B%E3%80%81Tomcat%0A%23%23%23%23%23%20%E3%80%90%E7%8E%AF%E5%A2%83%E3%80%91%0AJava%E3%80%81JDK8%E3%80%81Eclipse%E3%80%81IDEA%E3%80%81Tomcat%0A%23%23%23%23%23%20%E3%80%90%E4%BB%8B%E7%BB%8D%E3%80%91%0A%EF%BC%88IDEA%E5%92%8CEclipse%E4%B8%8A%E5%9D%87%E5%8F%AF%E8%BF%90%E8%A1%8C%EF%BC%89%0A*%20%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E5%9C%B0%E5%9B%BE(%E7%B1%BB%E4%BC%BC%E6%88%BF%E9%97%B4%E5%B9%B3%E9%9D%A2%E5%9B%BE)%EF%BC%8C%E5%9B%BE%E4%B8%8A%E6%A0%87%E6%9C%89%E5%A4%9A%E4%B8%AA%E6%A3%80%E6%B5%8B%E5%8C%BA%E5%9F%9F(%E4%B8%8B%E9%9D%A2%E5%B7%B2%E6%A0%87%E6%B3%A8%E8%A6%81%E6%A3%80%E6%B5%8B%E5%93%AA%E4%BA%94%E4%B8%AA)%EF%BC%8C%E5%8C%BA%E5%9F%9F%E4%B8%8A%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E7%9A%84%E6%A3%80%E6%B5%8B%E6%95%B0%E5%80%BC%E5%92%8C%E7%8A%B6%E6%80%81(%E7%BA%A2%EF%BC%8C%E9%BB%84%EF%BC%8C%E7%BB%BF)%E3%80%82%0A*%20%E7%82%B9%E5%87%BB%E6%A3%80%E6%B5%8B%E5%8C%BA%E5%9F%9F%EF%BC%8C%E5%BC%B9%E5%87%BA%E5%AF%B9%E8%AF%9D%E6%A1%86%EF%BC%8C%E5%AF%B9%E8%AF%9D%E6%A1%86%E4%B8%AD%E5%86%85%E5%AE%B9%E5%8C%85%E6%8B%AC%3A%0A%20%20%20%20*%20%E6%A3%80%E6%B5%8B%E6%95%B0%E5%80%BC%E7%9A%84%E5%AE%9E%E6%97%B6%E6%9B%B2%E7%BA%BF%EF%BC%8C%E5%8F%AF%E8%83%BD%E6%9C%89%E5%A4%9A%E4%B8%AA%EF%BC%88%E5%AE%9E%E6%97%B6%E7%9A%84%E6%84%8F%E6%80%9D%E6%98%AF%E8%A6%81%E6%98%BE%E7%A4%BA%E6%A3%80%E6%B5%8B%E5%8C%BA%E5%9F%9F%E9%83%A8%E5%88%86%E7%9A%84%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%EF%BC%8C%E4%BB%A5echarts%E7%9A%84%E6%9B%B2%E7%BA%BF%E5%9B%BE%E5%BD%A2%E5%BC%8F%E5%B1%95%E7%A4%BA%EF%BC%89%0A%20%20%20%20*%20%E5%90%8C%E6%97%B6%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E7%94%A8%E8%A1%A8%E6%A0%BC%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%8C%E6%98%BE%E7%A4%BA%E4%B8%8A%E8%BF%B0%E6%A3%80%E6%B5%8B%E6%95%B0%E5%80%BC%EF%BC%8C%E5%90%8C%E6%97%B6%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE%E5%8F%AF%E4%BB%A5%E5%AF%BC%E5%87%BAEXCEL%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6%0A%20%20%20%20*%20%E6%A3%80%E6%B5%8B%E5%8C%BA%E5%9F%9F%E7%9A%84%E5%AF%B9%E8%AF%9D%E6%A1%86%E5%8F%AF%E4%BB%A5%E5%90%8C%E6%97%B6%E6%98%BE%E7%A4%BA(%E9%9D%9E%E6%A8%A1%E6%80%81%E6%96%B9%E5%BC%8F)%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8F%AA%E8%83%BD%E5%8D%95%E4%B8%80%E6%98%BE%E7%A4%BA(%E6%A8%A1%E6%80%81%E6%96%B9%E5%BC%8F)%EF%BC%88%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%94%A8%EF%BC%8C%E5%8F%AA%E7%94%A8%E8%A1%A8%E6%A0%BC%EF%BC%89%0A*%20%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E6%89%80%E6%9C%89%E8%AF%B7%E6%B1%82%EF%BC%88%E5%A6%82%EF%BC%9A%E6%B8%A9%E5%BA%A6%E7%AD%89%E7%9A%84%E6%95%B0%E5%80%BC%E8%AE%B0%E5%BD%95%EF%BC%89%E9%83%BD%E9%80%9A%E8%BF%87%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84TOMCAT%E4%B8%8A%E7%9A%84java%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B04.%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BC%96%E5%86%99%E6%89%80%E6%9C%89%E8%AF%B7%E6%B1%82%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%8C%E4%BB%A5JSON%E6%A0%BC%E5%BC%8F%E6%96%B9%E5%BC%8F%E8%BF%94%E5%9B%9E%E8%AF%B7%E6%B1%82%E5%86%85%E5%AE%B9%0A*%20%E5%A4%9A%E8%A1%8C%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%90%8C%E7%9A%84%E6%A3%80%E6%B5%8B%E5%86%85%E5%AE%B9%EF%BC%8C%E6%8A%8A%E7%8A%B6%E6%80%81%E6%8C%89%E9%92%AE%E8%B0%83%E5%88%B0%E6%AF%8F%E8%A1%8C%E7%9A%84%E5%89%8D%E9%9D%A2%E4%BD%9C%E4%B8%BA%E5%90%84%E8%87%AA%E7%9A%84%E7%8A%B6%E6%80%81%EF%BC%88%E7%BA%A2%E9%BB%84%E7%BB%BF%E4%B8%89%E7%A7%8D%EF%BC%89%E3%80%82%0A*%20%E6%A3%80%E6%B5%8B%E5%8C%BA%E5%9F%9F%EF%BC%9A%0A%20%20%20%20*%20%E5%8E%A8%E6%88%BF%EF%BC%9A%E4%B8%80%E6%B0%A7%E5%8C%96%E7%A2%B3%E6%B5%93%E5%BA%A6%EF%BC%8C%E6%B8%A9%E5%BA%A6%0A%20%20%20%20*%20%E4%B8%BB%E5%8D%A7%EF%BC%9A%E6%B8%A9%E5%BA%A6%EF%BC%8C%E6%B9%BF%E5%BA%A6%EF%BC%8C%E5%99%AA%E5%A3%B0%0A%20%20%20%20*%20%E9%98%B3%E5%8F%B0%EF%BC%9A%E6%B8%A9%E5%BA%A6%EF%BC%8C%E6%B9%BF%E5%BA%A6%EF%BC%8C%E9%A3%8E%E5%8A%9B%0A%20%20%20%20*%20%E9%A4%90%E5%8E%85%EF%BC%9A%E6%B8%A9%E5%BA%A6%EF%BC%8C%E6%B9%BF%E5%BA%A6%EF%BC%8C%E5%85%89%E4%BA%AE%0A%20%20%20%20*%20%E4%B8%BB%E5%8D%AB%EF%BC%9A%E6%B8%A9%E5%BA%A6%EF%BC%8C%E6%B9%BF%E5%BA%A6%0A%0A%23%23%23%23%23%20%E3%80%90%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA%E3%80%91%0A%E6%9C%89%E4%B8%A4%E5%8D%83%E5%A4%9A%E5%AD%97%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3%EF%BC%88%E4%BA%94%E4%B8%AA%E5%8C%BA%E5%9F%9F%EF%BC%8C%E6%AD%A4%E5%A4%84%E4%B9%8B%E5%B1%95%E7%A4%BA%E4%B8%A4%E4%B8%AA%E4%BA%86%E4%B8%80%E4%B8%AA%E5%8E%A8%E6%88%BF%E4%BD%9C%E4%B8%BA%E6%BC%94%E7%A4%BA%EF%BC%8CGIF%E8%BF%87%E5%A4%A7%EF%BC%8C%E4%B8%8D%E8%83%BD%E4%B8%8A%E4%BC%A0%EF%BC%8C%E6%83%B3%E8%A6%81%E7%9C%8B%E8%A7%86%E9%A2%91%E6%95%88%E6%9E%9C%E5%8F%AF%E4%BB%A5%E8%81%94%E7%B3%BB%E5%8D%9A%E4%B8%BB-%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F%E5%9C%A8%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8%EF%BC%89%0A!%5Bf38feec6f7325ebfad8fdf36de010e43.png%5D(en-resource%3A%2F%2Fdatabase%2F3265%3A1)%0A!%5Bc07c144a319004e219cee7549d35eb12.png%5D(en-resource%3A%2F%2Fdatabase%2F3267%3A1)%0A!%5Bc54bb326475009a58057c18f3e7ca6df.png%5D(en-resource%3A%2F%2Fdatabase%2F3269%3A1)%0A!%5Ba8722688831e732bae1981adfbc337b3.png%5D(en-resource%3A%2F%2Fdatabase%2F3271%3A1)%0A%0A%23%23%23%23%23%20%E3%80%90%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E3%80%91%0A1.%20%E5%AE%89%E8%A3%85%E7%9B%B8%E5%BA%94%E7%89%88%E6%9C%ACJDK%EF%BC%88%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%89%0A2.%20%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE%E5%88%B0IDEA%E6%88%96Eclipse%0A3.%20%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE%0A%23%23%23%23%23%20%E3%80%90%E9%97%AE%E9%A2%98%E8%81%94%E7%B3%BB%E3%80%91%0A*%20QQ%3A535798943%0A*%20%E9%82%AE%E7%AE%B1%3A535798943%40qq.com%0A*%20%E3%80%90%E6%B3%A81%E3%80%91%E8%81%94%E7%B3%BB%E6%97%B6%E8%AF%B7%E6%B3%A8%E6%98%8E%E5%93%AA%E9%87%8C%E7%9C%8B%E5%88%B0%E7%9A%84%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%0A*%20%E3%80%90%E6%B3%A82%E3%80%91%E6%AF%8F%E4%B8%AA%E9%A1%B9%E7%9B%AE%E9%83%BD%E5%9C%A8%E6%A0%87%E6%B3%A8%E7%9A%84%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BF%90%E8%A1%8C%E8%BF%87%EF%BC%8C%E6%9C%89%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81%0A</center></span>
+</div></body></html> 
